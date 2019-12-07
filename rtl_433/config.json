@@ -8,14 +8,14 @@
 	"devices":  ["/dev/bus/usb:/dev/bus/usb:rwm"],
 	"host_network": "False",
 	"arch": ["i386"],
-	"options": [
+	"options": {
 		"protocol": "70",
 		"frequency": 345000000
-	],
-	"schema": [
+	},
+	"schema": {
 		"protocol": "str",
 		"frequency": "int"
-	]
+	}
 }
 	
 
