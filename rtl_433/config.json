@@ -11,13 +11,23 @@
 	"startup": "before",
 	"options": {
 		"protocol": "70",
-		"frequency": 345000000
+		"frequency": 345000000,
+		"mqtt_host": "homeassistant",
+		"mqtt_port": 1833,
+		"mqtt_client_id": "rtl_433",
+		"mqtt_username": "",
+		"mqtt_password": ""
 	},
 	"schema": {
 		"protocol": "str",
-		"frequency": "int"
+		"frequency": "int",
+                "mqtt_host": "str",
+                "mqtt_port": "port",
+                "mqtt_client_id": "str",
+                "mqtt_username": "str",
+                "mqtt_password": "str"
 	},
-	"image": "epruesse/hassio_addion-rtl_433-{arch}"
+	"image": "epruesse/hassio_addon-rtl_433-{arch}"
 }
 	
 

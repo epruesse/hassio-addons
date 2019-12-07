@@ -3,7 +3,7 @@ FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
 
-RUN apk add --no-cache libusb && \
+RUN apk add --no-cache libusb js && \
     apk add --no-cache --virtual build-deps \
             alpine-sdk cmake git libusb-dev && \
     mkdir /tmp/build && cd /tmp/build && \
