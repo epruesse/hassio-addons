@@ -3,11 +3,12 @@
 	"version": "0.1",
 	"slug": "rtl_433",
 	"description": "Run RTL_433 with output directed to MQTT",
-	"startup": "before",
+	"arch": ["i386", "amd64", "aarch64", "armv7"],
+	"url": "https://github.com/epruesse/hassio-addons/rtl_433",
+	"startup": "services",
 	"boot": "auto",
 	"devices":  ["/dev/bus/usb:/dev/bus/usb:rwm"],
-	"host_network": "False",
-	"arch": ["i386", "amd64", "aarch64", "armv7"],
+	"startup": "before",
 	"options": {
 		"protocol": "70",
 		"frequency": 345000000
@@ -15,7 +16,8 @@
 	"schema": {
 		"protocol": "str",
 		"frequency": "int"
-	}
+	},
+	"image": "epruesse/hassio_addion-rtl_433-{arch}"
 }
 	
 
