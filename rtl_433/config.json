@@ -1,0 +1,21 @@
+{
+	"name": "RTL_433 (MQTT mode)",
+	"version": "0.1",
+	"slug": "rtl_433",
+	"description": "Run RTL_433 with output directed to MQTT",
+	"startup": "before",
+	"boot": "auto",
+	"devices":  ["/dev/bus/usb:/dev/bus/usb:rwm"],
+	"host_network": "False",
+	"arch": ["i386"],
+	"options": [
+		"protocol": "70",
+		"frequency": 345000000
+	],
+	"schema": [
+		"protocol": "str",
+		"frequency": "int"
+	]
+}
+	
+
