@@ -3,8 +3,9 @@ FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
 
-RUN apk add --no-cache --virtual \
-       build-deps alpine-sdk cmake git libusb-dev && \
+RUN apk add --no-cache libusb && \
+    apk add --no-cache --virtual build-deps \
+            alpine-sdk cmake git libusb-dev && \
     mkdir /tmp/build && cd /tmp/build && \
     \
     git clone git://git.osmocom.org/rtl-sdr.git && \
