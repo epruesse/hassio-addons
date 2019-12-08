@@ -22,3 +22,7 @@ RUN apk add --no-cache libusb && \
     \
     apk del build-deps && rm -rf /tmp/build
 
+COPY run.sh /
+RUN chmod a+x /run.sh
+CMD [ "/run.sh" ]
+

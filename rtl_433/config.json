@@ -12,8 +12,10 @@
 	"options": {
 		"protocol": "70",
 		"frequency": 345000000,
+		"frequency_offset": 0,
+		"gain": 0,
 		"mqtt_host": "homeassistant",
-		"mqtt_port": 1833,
+		"mqtt_port": 1883,
 		"mqtt_client_id": "rtl_433",
 		"mqtt_username": "",
 		"mqtt_password": ""
@@ -21,6 +23,8 @@
 	"schema": {
 		"protocol": "str",
 		"frequency": "int",
+		"frequency_offset": "int",
+		"gain": "int",
                 "mqtt_host": "str",
                 "mqtt_port": "port",
                 "mqtt_client_id": "str",
