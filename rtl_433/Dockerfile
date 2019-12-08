@@ -15,7 +15,7 @@ RUN apk add --no-cache libusb && \
     chmod +s /usr/local/bin/rtl_* && \
     \
     cd /tmp/build && \
-    git clone https://github.com/merbanan/rtl_433 && \
+    git clone https://github.com/epruesse/rtl_433 && \
     cd rtl_433 && mkdir build && cd build && \
     cmake .. && \
     make && make install && \

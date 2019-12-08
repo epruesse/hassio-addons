@@ -19,10 +19,13 @@ fi
 if [ -n "$MQTT_PASS" ]; then
 	MQTT_ARGS="$MQTT_ARGS,pass=$MQTT_PASS"
 fi
+MQTT_ARGS="$MQTT_ARGS,devices=rtl_433/devices[/type][/model][/subtype][/channel][/id]"
+MQTT_ARGS="$MQTT_ARGS,events=rtl_433/events"
+MQTT_ARGS="$MQTT_ARGS,states=rtl_433/states"
 
 set -x
-rtl_433 -f $FREQUENCY -p $OFFSET \
+rtl_433 -M newmodel \
+	-f $FREQUENCY -p $OFFSET \
 	-g $GAIN \
 	-R $PROTOCOL \
 	-F mqtt://$MQTT_HOST:$MQTT_PORT$MQTT_ARGS
-
